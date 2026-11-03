@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "typefolio-web",
+  "main": "_worker.js",
+  "compatibility_date": "2026-11-03",
+  "build": { "command": "python3 tools/build-deploy.py" },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/contact"]
+  },
+  "vars": {
+    "CONTACT_FROM_EMAIL": "noreply@auth.typefolioapp.nazrin.codes",
+    "CONTACT_ALLOWED_HOSTNAMES": "typefolioapp.nazrin.codes"
+  }
+}

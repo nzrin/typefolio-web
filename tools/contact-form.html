@@ -1,0 +1,42 @@
+<section class="contact-card" aria-labelledby="contact-title">
+  <span class="contact-symbol" aria-hidden="true">↗</span>
+  <p class="eyebrow">A NOTE, STRAIGHT FROM YOU</p>
+  <h2 id="contact-title">Say hello.</h2>
+  <p>Send a question, share an idea, or let us know where your mission went off course.</p>
+  <form id="contact-form" class="contact-form" data-contact-endpoint="/api/contact" action="/api/contact" method="post" aria-describedby="contact-delivery-note">
+    <div class="contact-field">
+      <label for="contact-name">Your name <span>(optional)</span></label>
+      <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="80" placeholder="What should we call you?">
+    </div>
+    <div class="contact-field">
+      <label for="contact-email">Email address</label>
+      <input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="you@example.com">
+    </div>
+    <div class="contact-field">
+      <label for="contact-topic">What’s on your mind?</label>
+      <select id="contact-topic" name="topic" required>
+        <option>General question</option><option>Bug report</option><option>Feature idea</option><option>Privacy or terms</option>
+      </select>
+    </div>
+    <div class="contact-field">
+      <label for="contact-message">Your message</label>
+      <textarea id="contact-message" name="message" rows="6" minlength="10" maxlength="3000" required aria-describedby="contact-message-hint" placeholder="Tell us a little more…"></textarea>
+      <small id="contact-message-hint">10–3,000 characters. For bugs, include your device and app version.</small>
+    </div>
+    <div class="contact-honeypot" aria-hidden="true" inert>
+      <label for="contact-website">Leave this field empty</label>
+      <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+    </div>
+    <div class="contact-verification">
+      <div id="contact-turnstile"></div>
+      <p id="contact-verification-status" class="contact-help" role="status">Loading spam protection…</p>
+      <button id="contact-retry" type="button" class="contact-retry" hidden>Retry verification</button>
+    </div>
+    <p id="contact-delivery-note" class="contact-help">Your message will be sent to Type Folio support when you submit this form.</p>
+    <button id="contact-submit" class="button contact-submit" type="button" disabled><span id="contact-submit-label">Send message</span><span aria-hidden="true">↗</span></button>
+    <p id="contact-status" class="contact-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    <noscript><p class="contact-help">Please enable JavaScript to use the protected form, or email us using the link below.</p></noscript>
+  </form>
+  <p class="contact-note">We use your details to respond to your request. Spam protection is provided by Cloudflare Turnstile. Read our <a href="../privacy/#website">Privacy Policy</a>.</p>
+  <p class="contact-email">Prefer email? <a href="mailto:support@typefolioapp.nazrin.codes">support@typefolioapp.nazrin.codes</a></p>
+</section>

@@ -1,0 +1,36 @@
+    <main id="main" class="page-main reset-main">
+      <section class="reset-card" aria-labelledby="reset-title">
+        <img class="reset-icon" src="/assets/icon.webp" width="64" height="64" alt="">
+        <p class="eyebrow">Account recovery</p>
+        <h1 id="reset-title" tabindex="-1">Choose a new password.</h1>
+        <p class="reset-description" data-reset-description>Make it unique to Type Folio, with at least 8 characters.</p>
+        <form data-reset-form novalidate method="post" action="/reset">
+          <fieldset data-reset-fields disabled>
+            <legend class="reset-sr-only">Your new password</legend>
+            <label for="new-password">New password</label>
+            <div class="reset-password">
+              <input id="new-password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="password-hint reset-status">
+              <button type="button" data-password-toggle="new-password" aria-controls="new-password" aria-label="Show new password" aria-pressed="false">Show</button>
+            </div>
+            <p id="password-hint" class="reset-hint">Use at least 8 characters. A longer passphrase is even better.</p>
+            <label for="confirm-password">Confirm new password</label>
+            <div class="reset-password">
+              <input id="confirm-password" type="password" autocomplete="new-password" minlength="8" required aria-describedby="reset-status">
+              <button type="button" data-password-toggle="confirm-password" aria-controls="confirm-password" aria-label="Show confirmed password" aria-pressed="false">Show</button>
+            </div>
+            <button class="reset-submit" type="submit" data-reset-submit disabled>Reset password</button>
+          </fieldset>
+        </form>
+        <p id="reset-status" class="reset-status" role="status" aria-live="polite" aria-atomic="true">Checking your reset link…</p>
+        <noscript><p>JavaScript is required to reset your password. Enable it, then reopen the link in your email.</p></noscript>
+        <div class="reset-actions" data-reset-success hidden>
+          <a class="reset-submit button-link" href="com.nazrinapp.typefolio://login-callback/">Open Type Folio</a>
+          <p>Already on another device? Open the app there and sign in with your new password.</p>
+        </div>
+        <div class="reset-help" data-reset-help>
+          <p>Your password only changes when you select “Reset password”.</p>
+          <p>Need a new link? Open Type Folio, go to Sign in, enter your email address, then select “Forgot password” on the password screen.</p>
+          <a href="/contact/">Need help signing in?</a>
+        </div>
+      </section>
+    </main>
